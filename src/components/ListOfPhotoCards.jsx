@@ -1,12 +1,9 @@
 import React from 'react'
 import { PhotoCard } from './PhotoCard'
-import { getPhotos } from '../hoc/hocForPhotos'
-import { useQuery } from '@apollo/client'
+import { ListOfPhotoCards } from '../container/ListOfPhotoCards'
 
 const ListOfPhotoCardsComponent = ({ categoryId }) => {
-  const { loading, error, data } = useQuery(getPhotos, {
-    variables: { categoryId }
-  })
+  const { loading, error, data } = ListOfPhotoCards({ categoryId })
 
   if (error) {
     return <h2>Internal Server Error</h2>

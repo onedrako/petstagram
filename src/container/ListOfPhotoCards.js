@@ -6,10 +6,7 @@ const ListOfPhotoCards = ({ categoryId }) => {
     variables: { categoryId }
   })
 
-  console.log(useQuery(getPhotos, {
-    variables: { categoryId }
-  }))
-  return [loading, error, data]
+  return { loading, error, data }
 }
 
 export { ListOfPhotoCards }
