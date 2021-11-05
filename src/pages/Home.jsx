@@ -1,13 +1,13 @@
 import React from 'react'
 import { ListOfCategories } from '../components/ListOfCategories'
-import { ListOfPhotoCardsComponent } from '../components/ListOfPhotoCards'
+import { ListOfPhotoCardsComponent } from '../components/ListOfPhotoCardsComponent'
 
-const Home = ({ id }) => {
+const Home = (path) => {
+  console.log('path in home ' + path)
   return (
     <>
-
       <ListOfCategories />
-      <ListOfPhotoCardsComponent categoryId={id} />
+      <ListOfPhotoCardsComponent categoryId={path.id} />
     </>
   )
 }
