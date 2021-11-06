@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Category } from './Category'
 import { List, Item } from './styles/stylesListCategories'
 // import { categories as mockCategories } from '../../api/db.json'
+import { useParams } from 'react-router-dom'
 
 function useCategoriesData () {
   const [categories, setCategories] = React.useState([])
@@ -42,7 +43,7 @@ const ListOfCategories = () => {
           ? <Item key='loading'><Category /></Item>
           : categories.map(category =>
             <Item key={category.id}>
-              <Category {...category} path={`/?pet=${category.id}`} />
+              <Category {...category} path={`/pet/${category.id}`} />
             </Item>)
       }
     </List>

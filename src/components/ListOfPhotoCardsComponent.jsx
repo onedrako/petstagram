@@ -1,8 +1,12 @@
 import React from 'react'
 import { PhotoCard } from './PhotoCard'
 import { ListOfPhotoCards } from '../container/ListOfPhotoCards'
+import { useParams } from 'react-router'
 
-const ListOfPhotoCardsComponent = ({ categoryId }) => {
+const ListOfPhotoCardsComponent = () => {
+  const { id } = useParams()
+  const categoryId = id
+
   const { loading, error, data } = ListOfPhotoCards({ categoryId })
 
   if (error) {

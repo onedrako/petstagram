@@ -1,6 +1,7 @@
 import React from 'react'
 import { PhotoCard } from '../components/PhotoCard'
 import { gql, useQuery } from '@apollo/client'
+import { useParams } from 'react-router-dom'
 
 const GET_SINGLE_PHOTO = gql`
   query getSinglePhoto($id:ID!) {
@@ -28,8 +29,9 @@ const renderProp = ({ loading, error, data }) => {
   )
 }
 
-const PhotoCardWithQuery = ({ id }) => {
-  console.log(id)
+const PhotoCardWithQuery = () => {
+  const { id } = useParams()
+
   const { loading, error, data } = useQuery(GET_SINGLE_PHOTO, {
     variables: {
       id: id
