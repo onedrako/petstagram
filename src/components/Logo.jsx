@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { Svg } from './styles/StyledLogo'
-import { Link } from './styles/stylesCategory'
+import { StyledLink } from './styles/stylesCategory'
 
 function Logo (props) {
   return (
-    <Link to='/'>
+    <StyledLink to='/'>
       <Svg
         width={387.931}
         height={122}
@@ -59,7 +59,7 @@ function Logo (props) {
         </g>
         <style />
       </Svg>
-    </Link>
+    </StyledLink>
   )
 }
 
