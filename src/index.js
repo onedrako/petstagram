@@ -7,7 +7,16 @@ import { AppProvider } from './Context/Context'
 
 const client = new ApolloClient({
   uri: 'https://petgramapionedrako.vercel.app/graphql',
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
+  request: operation => {
+    const token = window.sessionStorage.getItem('token')
+    const authorization = token ? `Bearer ${token}` : ''
+    operation.setContext({
+      headers: {
+        authorization
+      }
+    })
+  }
 })
 
 ReactDOM.render(

@@ -10,6 +10,9 @@ const Input = styled.input`
   margin-bottom: 8px;
   padding: 8px 4px;
   width: 100%;
+  &[disabled]{
+    opacity: 0.3;
+  }
   `
 
 const Button = styled.button`
@@ -20,6 +23,9 @@ const Button = styled.button`
   display: block;
   width: 100%;
   text-align: center;
+  &[disabled]{
+    opacity: 0.3;
+  }
   `
 
 const Title = styled.h2`
@@ -28,4 +34,9 @@ const Title = styled.h2`
   margin: 8px 0;
   `
 
-export { Form, Input, Button, Title }
+const Error = styled.span`
+  font-size: 14px;
+  color: red;
+  `
+
+export { Form, Input, Button, Title, Error }
