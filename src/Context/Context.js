@@ -12,8 +12,13 @@ const AppProvider = (props) => {
     window.sessionStorage.setItem('token', token)
   }
 
+  const removeAuth = () => {
+    setIsAuth(false)
+    window.sessionStorage.removeItem('token')
+  }
+
   return (
-    <AppContext.Provider value={{ isAuth, activateAuth }}>
+    <AppContext.Provider value={{ isAuth, activateAuth, removeAuth }}>
       {props.children}
     </AppContext.Provider>
   )

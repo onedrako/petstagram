@@ -1,9 +1,11 @@
 import React from 'react'
+import { RenderFavorites } from '../container/GetFavorites'
 
 export const Favorites = () => {
   return (
-    <div>
+    <>
       <h1>FAVS</h1>
-    </div>
+      <RenderFavorites />
+    </>
   )
 }
