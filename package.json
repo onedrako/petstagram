@@ -4,12 +4,12 @@
   "description": "**¡Sígueme en Youtube para más contenido de React y Javascript!** 👉 https://www.youtube.com/midudev",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
     "lint": "standard",
     "vercel-buid": "npm run build",
-    "serve:dev": "webpack --mode 'development' && npx serve dist -s"
+    "serve:dev": "webpack --mode 'development' && npx serve dist -s",
+    "test": "cypress open"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
     "@babel/preset-env": "^7.16.0",
     "@babel/preset-react": "^7.16.0",
     "babel-loader": "^8.2.3",
+    "cypress": "^8.7.0",
     "html-loader": "^3.0.0",
     "html-webpack-plugin": "^5.5.0",
     "standard": "^16.0.4",

@@ -1,0 +1,6 @@
+{
+  "baseUrl": "https://petgramonedrako.vercel.app/",
+  "chromeWebSecurity": false,
+  "viewportWidth": 400,
+  "viewportHeigh": 800
+}
