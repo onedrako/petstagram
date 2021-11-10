@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Category } from './Category'
 import { List, Item } from './styles/stylesListCategories'
-// import { categories as mockCategories } from '../../api/db.json'
-import { useParams } from 'react-router-dom'
 
 function useCategoriesData () {
   const [categories, setCategories] = React.useState([])
@@ -22,7 +20,7 @@ function useCategoriesData () {
   return { categories, loading }
 }
 
-const ListOfCategories = () => {
+const ListOfCategoriesComponent = () => {
   const { categories, loading } = useCategoriesData()
   const [showFixed, setShowFixed] = useState(false)
 
@@ -57,4 +55,4 @@ const ListOfCategories = () => {
   )
 }
 
-export { ListOfCategories }
+export const ListOfCategories = React.memo(ListOfCategoriesComponent)
